@@ -7,16 +7,18 @@ import logoImg from '../../assets/logo.svg';
 import './styles.css'
 
 interface PageHeaderProps {
-  title: string;
+  title: string,
+  page: string
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({title, children}) => {
+const PageHeader: React.FC<PageHeaderProps> = ({title, children, page}) => {
   return (
     <header className="page-header">
         <div className="top-bar-container">
           <Link to="/">
             <img src={backIcon} alt="Voltar"/>
           </Link>
+          <p>{page}</p>
           <img src={logoImg} alt="Proffy"/>
         </div>
 

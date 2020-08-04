@@ -6,13 +6,13 @@
 }
 
 .page-header .top-bar-container{
-  width: 90%;
   display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-around;
+  min-width: 100%;
   align-items: center;
   color: var(--color-text-in-primary);
   padding: 1.6rem 0;
+  background: var(--color-primary-darker);
 }
 
 .page-header .top-bar-container > img {

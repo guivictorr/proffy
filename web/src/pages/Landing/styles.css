@@ -83,26 +83,29 @@
 .total-connections{
   font-size: 1.4rem;
 
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .total-connections img{
   margin-left: 0.8rem;
 }
 
-@media (min-width: 1100px){
+.welcome-message{
+  visibility: hidden;
+}
+
+@media (min-width: 1300px){
   #page-landing-content{
-    max-width: 1100px;
+    max-width: 1400px;
 
     display:grid;
-    grid-template-rows:350px 1fr;
+    grid-template-rows:450px 1fr;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas: 
     "logo hero hero"
-    "buttons buttons total"
+    "total buttons buttons"
     ;
   }
 
@@ -129,7 +132,7 @@
 
   .buttons-container{
     grid-area: buttons;
-    justify-content: flex-start;
+    justify-self: center;
   }
 
   .buttons-container a{
@@ -137,7 +140,25 @@
   }
 
   .total-connections{
-    grid-area: total;
+    display: block;
+    align-self: center;
     justify-self: end;
+    width: 17rem;
+    text-align: right;
+    margin-right: 4.2rem;
+
+  }
+
+  .welcome-message{
+    font-size: 2.6rem;
+    align-self: center;
+    visibility: visible;
+  }
+
+  #span-column{
+    grid-area: total;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }

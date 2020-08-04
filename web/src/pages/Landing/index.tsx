@@ -27,21 +27,30 @@ function Landing(){
           className="hero-image"
         />
 
-        <div className="buttons-container">
-          <Link to="/study" className="study">
-            <img src={studyIcon} alt="Estudar"/>
-            Estudar
-          </Link>
-          <Link to="/give-classes" className="give-classes">
-            <img src={giveClassesIcon} alt="Dar aula"/>
-            Dar aula
-          </Link>
-        </div>
+        
+    
+            <div className="buttons-container">
+              <Link to="/study" className="study">
+                <img src={studyIcon} alt="Estudar"/>
+                Estudar
+              </Link>
+              <Link to="/give-classes" className="give-classes">
+                <img src={giveClassesIcon} alt="Dar aula"/>
+                Dar aula
+              </Link>
+            </div>
 
-        <span className="total-connections">
-          Total de 200 conexões já realizadas 
-          <img src={purpleHeartIcon} alt="Coração roxo"/>
-        </span>
+            <div id="span-column">
+          <span className="welcome-message">
+                <p>Seja bem-vindo<br/>
+                <strong> O que deseja fazer?</strong>
+                </p>
+              </span>
+            <span className="total-connections">
+              Total de 200 conexões já realizadas 
+              <img src={purpleHeartIcon} alt="Coração roxo"/>
+            </span>
+        </div>
       </div>
     </div>
   )
