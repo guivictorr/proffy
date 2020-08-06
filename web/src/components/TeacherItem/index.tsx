@@ -1,37 +1,60 @@
 import React from 'react';
 
 import './styles.css'
-
 import whatsappIcon from '../../assets/icons/whatsapp.svg'
+import api from '../../services/api';
 
-const TeacherItem: React.FC = () => {
+export interface Teacher {
+  subject: string,
+  cost: number,
+  name: string,
+  avatar: string,
+  whatsapp: string,
+  bio: string,
+  id: number,
+}
+
+interface TeachersItemProps {
+  teacher: Teacher
+}
+
+
+const TeacherItem: React.FC<TeachersItemProps> = ({teacher}) => {
+
+  function createNewConnection(){
+    api.post('connections', {
+      user_id: teacher.id
+    })
+  }
+
   return (
         <article className="teacher-item">
           <header>
-            <img src="https://avatars3.githubusercontent.com/u/55333929?s=460&u=ee19ecf53d37b8dfc4492d50293a46e6fa9df302&v=4" alt="Guilherme Victor"/>
+            <img src={teacher.avatar} alt={teacher.name}/>
             <div>
               <strong>
-                Guilherme Victor
-                <span>Física</span>
+                {teacher.name}
+                <span>{teacher.subject}</span>
               </strong>
             </div>
           </header>
 
           <p>
-            Entusiasta das melhores tecnologias.
-            <br/>
-            Apaixonado por física ja lançou 50 Falcon 9 em nome da SpaceX. 2 Astronautas para a Lua e uma colônia em Marte.
+            {teacher.bio}
           </p>
 
           <footer>
             <p>
               Preço/hora
-              <strong>R$500,00</strong>
+              <strong>R${teacher.cost}</strong>
             </p>
-            <button type="button">
+            <a  
+              onClick={createNewConnection} 
+              href={`https://wa.me/${teacher.whatsapp}`}>
+
               <img src={whatsappIcon} alt="Whatsapp"/>
               Entrar em contato
-            </button>
+            </a>
           </footer>
         </article>
   );
