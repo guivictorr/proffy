@@ -37,14 +37,28 @@ Backend
 git clone https://github.com/guivictorr/proffy.git
 
 ## Instalar as dependências
-cd backend -> yarn ou npm install
-cd web -> yarn ou npm install
-cd mobile -> yarn ou npm install
+cd backend
+yarn ou npm install
+
+cd web
+yarn ou npm install
+
+cd mobile 
+yarn ou npm install
+
+## Criar as tabelas no banco de dados
+cd backend 
+yarn knex:migrate
 
 ## Iniciar 
-cd backend -> yarn start (http://localhost:4444)
-cd web -> yarn start (http://http://localhost:3000)
-cd mobile -> yarn start
+cd backend
+yarn start (http://localhost:4444)
+
+cd web 
+yarn start (http://http://localhost:3000)
+
+cd mobile
+yarn start
 ```
 ## :memo: Licença
 
