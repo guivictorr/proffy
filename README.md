@@ -50,6 +50,10 @@ yarn ou npm install
 cd backend 
 yarn knex:migrate
 
+##
+cd mobile/src/services
+# Change backend IP to your expo IP
+
 ## Iniciar 
 cd backend
 yarn start (http://localhost:4444)
