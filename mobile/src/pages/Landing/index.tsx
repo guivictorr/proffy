@@ -34,34 +34,39 @@ const Landing: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Image source={landingImg} style={styles.banner} />
+
+      <View style={styles.header}>
+        <Image source={landingImg} style={styles.banner} />
+      </View>
     
+      <View style={styles.landingContent}>
+        <Text style={styles.title}>
+          Seja bem vindo, {'\n'}
+          <Text style={styles.titleBold}>O que deseja fazer ?</Text>
+        </Text>
 
-      <Text style={styles.title}>
-        Seja bem vindo, {'\n'}
-        <Text style={styles.titleBold}>O que deseja fazer ?</Text>
-      </Text>
+        <View style={styles.buttonsContainer}>
+          <RectButton style={[styles.button, styles.buttonPrimary]} onPress={handleNavigationToStudyTabs}>
+            <Image source={studyIcon}/>
+            <Text style={styles.buttonText}>Estudar</Text>
+          </RectButton>
 
-      <View style={styles.buttonsContainer}>
-        <RectButton style={[styles.button, styles.buttonPrimary]} onPress={handleNavigationToStudyTabs}>
-          <Image source={studyIcon}/>
-          <Text style={styles.buttonText}>Estudar</Text>
-        </RectButton>
+          <RectButton 
+          
+            style={[styles.button, styles.buttonSecondary]}
+            onPress={handleNavigationToGiveClasses}
+            >
+            <Image source={giveClassesIcon}/>
+            <Text style={styles.buttonText}>Dar aulas</Text>
+          </RectButton>
+        </View>
 
-        <RectButton 
-         
-          style={[styles.button, styles.buttonSecondary]}
-          onPress={handleNavigationToGiveClasses}
-          >
-          <Image source={giveClassesIcon}/>
-          <Text style={styles.buttonText}>Dar aulas</Text>
-        </RectButton>
+        <Text style={styles.totalConnections}>
+          Total de {totalConnections} conexões já realizadas {' '}
+          <Image source={heartIcon}/>
+        </Text>
       </View>
 
-      <Text style={styles.totalConnections}>
-        Total de {totalConnections} conexões já realizadas {' '}
-        <Image source={heartIcon}/>
-      </Text>
     </View>
   );
 }

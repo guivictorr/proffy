@@ -4,8 +4,20 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     justifyContent:'center',
+  },
+
+  header:{
     backgroundColor:'#8257E5',
-    padding:40,
+    height:375,
+    justifyContent:'center',
+  },
+
+  landingContent:{
+    justifyContent:'center',
+    alignItems:'flex-start',
+    marginHorizontal:34,
+    marginBottom:64,
+    flex:1,
   },
 
   banner:{
@@ -15,7 +27,7 @@ const styles = StyleSheet.create({
 
   title:{
     fontFamily:'Poppins_400Regular',
-    color:'#fff',
+    color:'#6A6180',
     fontSize:20,
     lineHeight:30,
     marginTop:80
@@ -27,13 +39,15 @@ const styles = StyleSheet.create({
 
   buttonsContainer:{
     flexDirection:'row',
-    marginTop: 40,
-    justifyContent:'space-between'
+    marginTop: 20,
+    justifyContent:'space-between',
+    width:311,
+    height: 158,
+
   },
 
   button:{
-    height: 150,
-    width:'48%',
+    width:147,
     borderRadius:8,
     padding:24,
     justifyContent:'space-between',
@@ -56,11 +70,11 @@ const styles = StyleSheet.create({
 
   totalConnections:{
     fontFamily:'Poppins_400Regular',
-    color:'#d4c2ff',
+    color:'#9C98A6',
     fontSize:12,
     lineHeight:20,
     maxWidth:140,
-    marginTop:40,
+    marginTop:30,
   }
 })
 
